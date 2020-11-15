@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<p style="color:red">{{post}}</p>
+<h2 class="m-5">ログイン</h2>
+<form class="m-5" action="/login" method='POST'>
+    
+    <div class="form-group pb-3">
+        <label for="userid">ユーザID</label>
+        <input type="text" class="form-control" name="userid" aria-describedby="title-help">
+        <small id="title-help" class="form-text text-muted"></small>
+    </div>
+    <div class="form-group pb-3">
+        <label for="password">パスワード</label>
+        <input type="text" class="form-control" name="password">
+    </div>
+    <button type="submit" class="btn btn-primary">ログイン</button>
+
+</form>
+
+<form class="m-5" action="/register" method='GET'>
+    <button type="submit" class="btn btn-primary">新規登録</button>
+</form>
+{% endblock %}

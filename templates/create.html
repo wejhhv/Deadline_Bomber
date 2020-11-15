@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block body%}
+<form class="m-5" action="/member" method="POST">
+    
+    <div class="form-group pd-3">
+        <label for="twitterid">twitterのID</label>
+        <input type="text" class="form-control" name="twitterid">
+    </div>
+    <div class="form-group pd-3">
+        <label for="title">Title</label>
+        <input type="text" class="form-control" name="title">
+    </div>
+    <div class="form-group pd-3">
+        <label for="detail">Detail</label>
+        <input type="text" class="form-control" name="detail">
+    </div>
+
+    <!-- 質問 -->
+    <div class="form-group pd-3">
+        <label for="question1">{{ post1 }}</label>
+        <input type="text" class="form-control" name="question1">
+    </div>
+    <div class="form-group pd-3">
+        <label for="question2">{{ post2 }}</label>
+        <input type="text" class="form-control" name="question2">
+    </div>
+    <div class="form-group pd-3">
+        <label for="question3">{{ post3 }}</label>
+        <input type="text" class="form-control" name="question3">
+    </div>
+    <!-- 質問 -->
+ 
+    <div class="form-group pd-3">
+        <label for="due">Due</label>
+        <input type="date" name="due" required>
+    </div>
+    <a class="btn btn-outline-primary" href="/member" role="button">Return</a>
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>
+{% endblock %}
